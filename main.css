@@ -3,10 +3,28 @@
     src: url(SanFrancisco.woff);
 }
 
+@media (max-width: 1000px) {
+  #name {
+    font-size: 9em !important;
+  }
+
+  #details {
+    font-size: 2.5em !important;
+  }
+
+  #content {
+    font-size: 3em !important;
+  }
+
+  .tab {
+    padding: 0 20px 0;
+  }
+}
+
 body {
   background-color: #0af;
   font-family: SanFrancisco;
-  font-weight: lighter;
+  font-weight: normal;
   color: #fff;
 }
 
@@ -69,9 +87,3 @@ a:hover {
 .tab {
   padding: 0 50px 0;
 }
-
-/*.right-align {
-  width: 30%;
-  margin: 0 auto;
-  text-align: right;
-}*/
