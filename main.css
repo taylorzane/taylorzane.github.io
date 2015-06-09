@@ -1,0 +1,77 @@
+@font-face {
+    font-family: SanFrancisco;
+    src: url(SanFrancisco.woff);
+}
+
+body {
+  background-color: #0af;
+  font-family: SanFrancisco;
+  font-weight: lighter;
+  color: #fff;
+}
+
+#main {
+  height: 100vh;
+  width: 100%;
+}
+
+.top {
+  top: 0;
+  transform: translateY(0);
+}
+
+.middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.below {
+  top: 100%;
+  transform: translateY(0);
+}
+
+.wrap {
+  position: relative;
+  text-align: center;
+  -webkit-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#name {
+  font-size: 9em;
+}
+
+#details {
+  font-size: 2em;
+  padding: 20px;
+}
+
+#content {
+  font-size: 1.5em;
+}
+
+.active {
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid white;
+}
+
+.tab {
+  padding: 0 50px 0;
+}
+
+/*.right-align {
+  width: 30%;
+  margin: 0 auto;
+  text-align: right;
+}*/
