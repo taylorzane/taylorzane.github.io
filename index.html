@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Taylor Zane</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.js"></script>
   <script src="main.js"></script>
@@ -11,7 +10,7 @@
   <div id="main">
     <section id="wrapper" class="{{currentContent.text ? 'top' : 'middle'}} wrap">
       <div id="name">{{name}}</div>
-      <div id="details">
+      <div id="links">
         <span v-repeat="links">
           <a class="{{currentContent.link === label ? 'active' : ''}}" v-on="click: setContent(label)">{{label}}</a>
           <span v-if="$index < 3" class="tab">|</span> <!-- FIXME: Change this to calculate length of links. -->
@@ -22,7 +21,7 @@
         {{{currentContent.text}}}
 
         <!-- TODO: Implement this a little better. -->
-        <br/><br/>
+        <p>
         <a v-on="click: setContent('')">return</a>
       </div>
     </section>
