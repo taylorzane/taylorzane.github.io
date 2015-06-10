@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: 'resume',
-          content: "2015: Still crushin' it.<br/><br/>1993 - 2014: Crushed it."
+          content: "Oct 2014 &ndash; Present: Software Architect &ndash; Adelyte Company<p>\
+          2011 &ndash; Present: Development Consultant &ndash; Self<p>\
+          Feb 2014 &ndash; Aug 2014: SaaS DevOps Administrator &ndash; Zenoss Inc.<p>\
+          Jan 2013 &ndash; Feb 2014: iOS Customer Support &ndash; Apple Inc. <p>"
         }
       ]
     },
