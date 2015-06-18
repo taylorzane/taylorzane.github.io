@@ -4,16 +4,25 @@
   <title>Taylor Zane</title>
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+  </script>
   <script src="main.js"></script>
 </head>
 <body>
   <div id="main">
     <section id="wrapper" class="{{currentContent.text ? 'top' : 'middle'}} wrap">
+      <img class="{{currentContent.text ? 'pic-small' : 'pic-normal' }}" id="pic" src="TaylorHeadshotCropped500x500.png"/>
       <div id="name">{{name}}</div>
       <div id="links">
         <span v-repeat="links">
           <a class="{{currentContent.link === label ? 'active' : ''}}" v-on="click: setContent(label)">{{label}}</a>
-          <span v-if="$index < 3" class="tab">|</span> <!-- FIXME: Change this to calculate length of links. -->
+          <span v-if="$index < (links.length - 1)" class="tab">|</span> <!-- FIXME: Change this to calculate length of links. -->
         </span>
       </div>
       <div id="content" v-if="currentContent.text !== undefined">

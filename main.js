@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         link: undefined,
         text: undefined
       },
+      expandedContact: false,
       links: [
         {
           label: 'about',
@@ -15,9 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: 'contact',
-          content: "<div class='right-align'>email: <a href='mailto:howdy@taylorzane.com'>howdy@taylorzane.com</a><br/>\
+          content: "<div class='right-align'>\
+          email: <a href='mailto:howdy@taylorzane.com'>howdy@taylorzane.com</a><br/>\
           twitter: <a href='http://twitter.com/thetaylorzane'>@thetaylorzane</a><br/>\
-          github: <a href='https://github.com/taylorzane'>taylorzane</a></div>"
+          github: <a href='https://github.com/taylorzane'>taylorzane</a><br/>\
+          </div>"
         },
         {
           label: 'projects',
@@ -25,10 +28,12 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: 'resume',
-          content: "Oct 2014 &ndash; Present: Software Architect &ndash; Adelyte Company<p>\
-          2011 &ndash; Present: Development Consultant &ndash; Self<p>\
-          Feb 2014 &ndash; Aug 2014: SaaS DevOps Administrator &ndash; Zenoss Inc.<p>\
-          Jan 2013 &ndash; Feb 2014: iOS Customer Support &ndash; Apple Inc. <p>"
+          content: "Software Architect &ndash; Adelyte Company: Oct 2014 &ndash; Present<p>\
+          Development Consultant &ndash; Self: 2011 &ndash; Present<p>\
+          SaaS DevOps Administrator &ndash; Zenoss Inc.: Feb 2014 &ndash; Aug 2014<p>\
+          iOS Customer Support &ndash; Apple Inc.: Jan 2013 &ndash; Feb 2014<p>\
+          Department Supervisor &ndash; Fry's Electronics: Jul 2011 &ndash; Jan 2013<p>\
+          Department Sales &ndash; Fry's Electronics: Aug 2010 &ndash; Jul 2011<p>"
         }
       ]
     },
@@ -41,11 +46,17 @@ document.addEventListener("DOMContentLoaded", function() {
           vm.$set('currentContent.link', key);
           vm.$set('currentContent.text', vm.$get('links').filter(function(x){return x.label === key;})[0].content);
         }
-      }
-    },
-    ready: function() {
-      document.getElementById('wrapper').classList.toggle('below')
-      setTimeout(function() {document.getElementById('wrapper').classList.toggle('below')}, 500);
+      },
+      // showMoreContact: function() {
+      //   expandedContact = !expandedContact;
+      // }
     }
   });
 });
+
+
+// EXTRA CONTACT INFO
+// <a v-show='!expandedContact' v-on='click: showMoreContact()'>{{ expandedContact ? more... : less... }}</a><br>\
+// <div v-show='expandedContact'>\
+// codepen: <a href='https://codepen.io/taylorzane'>taylorzane</a>\
+// </div>\

@@ -30,13 +30,8 @@ body {
 }
 
 .middle {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.below {
-  top: 100%;
-  transform: translateY(0);
+  top: 25%;
+  transform: translateY(-25%);
 }
 
 .active {
@@ -92,11 +87,22 @@ a:hover {
   }
 }
 
+#pic {
+  border-radius: 12.5%;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
+.pic-normal {
+  width: 200px;
+  height: 200px;
+  border: 3px solid white;
+}
 
-
-
-
+.pic-small {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+}
 
 
 
