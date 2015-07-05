@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var vm = new Vue({ // jshint ignore:line
     el: '#main',
     data: {
-      name: 'Taylor Zane',
+      name: 'Taylor Zane Glaeser',
       currentContent: {
         link: undefined,
         text: undefined
