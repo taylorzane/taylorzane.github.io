@@ -1,0 +1,136 @@
+//- <!DOCTYPE html>
+//- <html>
+//- <head>
+//-   <title>Taylor Zane Glaeser</title>
+//-   <link rel="stylesheet" type="text/css" href="main.css">
+//-   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.js"></script>
+//-   <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+//-   <!--<script>
+//-     if ('addEventListener' in document) {
+//-         document.addEventListener('DOMContentLoaded', function() {
+//-             FastClick.attach(document.body);
+//-         }, false);
+//-     }
+//-   </script>
+//-   <script src="main.js"></script>-->
+//- </head>
+//- <body>
+//-   <div id="main">
+//-     <section id="wrapper" class="{{currentContent.text ? 'top' : 'middle'}} wrap">
+//-       <img class="{{currentContent.text ? 'pic-small' : 'pic-normal' }}" id="pic" src="TaylorHeadshotCropped500x500.png"/>
+//-       <div id="name">{{name}}</div>
+//-       <div id="links">
+//-         <span v-repeat="links">
+//-           <a class="{{currentContent.link === label ? 'active' : ''}}" v-on="click: setContent(label)">{{label}}</a>
+//-           <span v-if="$index < (links.length - 1)" class="tab">|</span>
+//-         </span>
+//-       </div>
+//-       <div id="content" v-if="currentContent.text !== undefined">
+//-         <br/>
+//-         {{{currentContent.text}}}
+//-         <!-- TODO: Implement this a little better. -->
+//-         <p>
+//-         <a v-on="click: setContent('')">return</a>
+//-       </div>
+//-     </section>
+//-   </div>
+//- </body>
+//- </html>
+
+doctype html5
+html
+  head
+    title Taylor Zane Glaeser
+    link(rel="stylesheet" type="text/css" href="main.styl")
+  body
+    #name
+      | Taylor Zane
+      br
+      | Glaeser
+    #content-tabs
+      //- links: [
+      //-   {
+      //-     label: 'about',
+      //-     content: "This is some text about me. I really enjoy coding Ruby and JavaScript! I'm also very good at Python."
+      //-   },
+      //-   {
+      //-     label: 'contact',
+      //-     content: "<div class='right-align'>\
+      //-     email: <a href='mailto:howdy@taylorzane.com'>howdy@taylorzane.com</a><br/>\
+      //-     twitter: <a href='http://twitter.com/thetaylorzane'>@thetaylorzane</a><br/>\
+      //-     github: <a href='https://github.com/taylorzane'>taylorzane</a><br/>\
+      //-     </div>"
+      //-   },
+      //-   {
+      //-     label: 'projects',
+      //-     content: 'Some awesome stuff here.'
+      //-   },
+      //-   {
+      //-     label: 'resume',
+      //-     content: "Software Architect &ndash; Adelyte Company: Oct 2014 &ndash; Present<p>\
+      //-     Development Consultant &ndash; Self: 2011 &ndash; Present<p>\
+      //-     SaaS DevOps Administrator &ndash; Zenoss Inc.: Feb 2014 &ndash; Aug 2014<p>\
+      //-     iOS Customer Support &ndash; Apple Inc.: Jan 2013 &ndash; Feb 2014<p>\
+      //-     Department Supervisor &ndash; Fry's Electronics: Jul 2011 &ndash; Jan 2013<p>\
+      //-     Department Sales &ndash; Fry's Electronics: Aug 2010 &ndash; Jul 2011<p>"
+      //-   }
+      //- ]
+      .content-tab
+        input(type="radio" id="tab-about" name="content" checked)
+        label(for="tab-about") About
+        .content.
+          This is some text about me. I really enjoy coding Ruby and JavaScript! I'm also very good at Python.
+      .content-tab
+        input(type="radio" id="tab-contact" name="content")
+        label(for="tab-contact") Contact
+        .content.
+          email: <a href='mailto:howdy@taylorzane.com'>howdy@taylorzane.com</a><br/>
+          twitter: <a href='http://twitter.com/thetaylorzane'>@thetaylorzane</a><br/>
+          github: <a href='https://github.com/taylorzane'>taylorzane</a><br/>
+      .content-tab
+        input(type="radio" id="tab-projects" name="content")
+        label(for="tab-projects") Projects
+        .content.
+          Some awesome stuff here.
+      .content-tab
+        input(type="radio" id="tab-resume" name="content")
+        label(for="tab-resume") Resume
+        .content.
+          Software Architect &ndash; Adelyte Company: Oct 2014 &ndash; Present<p>
+          Development Consultant &ndash; Self: 2011 &ndash; Present<p>
+          SaaS DevOps Administrator &ndash; Zenoss Inc.: Feb 2014 &ndash; Aug 2014<p>
+          iOS Customer Support &ndash; Apple Inc.: Jan 2013 &ndash; Feb 2014<p>
+          Department Supervisor &ndash; Fry's Electronics: Jul 2011 &ndash; Jan 2013<p>
+          Department Sales &ndash; Fry's Electronics: Aug 2010 &ndash; Jul 2011<p>
+
+      //- <div class="tabs">
+
+      //-    <div class="tab">
+      //-        <input type="radio" id="tab-1" name="tab-group-1" checked>
+      //-        <label for="tab-1">Tab One</label>
+
+      //-        <div class="content">
+      //-            stuff
+      //-        </div>
+      //-    </div>
+
+      //-    <div class="tab">
+      //-        <input type="radio" id="tab-2" name="tab-group-1">
+      //-        <label for="tab-2">Tab Two</label>
+
+      //-        <div class="content">
+      //-            stuff
+      //-        </div>
+      //-    </div>
+
+      //-     <div class="tab">
+      //-        <input type="radio" id="tab-3" name="tab-group-1">
+      //-        <label for="tab-3">Tab Three</label>
+
+      //-        <div class="content">
+      //-            stuff
+      //-        </div>
+      //-    </div>
+
+      //- </div>
+
