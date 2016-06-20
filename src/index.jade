@@ -1,0 +1,158 @@
+doctype html5
+html
+  head
+    title Taylor Zane Glaeser
+    link(rel="stylesheet" type="text/css" href="/main.css")
+  body
+    #name
+      | Taylor Zane
+      br
+      | Glaeser
+    #content-tabs
+      .content-tab
+        input(type="radio" id="tab-about" name="content" checked)
+        label(for="tab-about") About
+        .content
+          p.
+            Welcome! My name is Taylor and I'm a software developer from of Austin, Texas. I have a passion for software, art, and music.
+          p.
+            I've been developing software as a hobby for about 10 years, and professionally for the past 5.
+          //- p.
+            In my free time I like to spend time with my family, see live music in Austin, and spend time on the lakes nearby.
+      .content-tab
+        input(type="radio" id="tab-contact" name="content")
+        label(for="tab-contact") Contact
+        .content
+          span Feel free to reach out to me!
+          ul.contact-list
+            li email: <a href='mailto:howdy@taylorzane.com'>howdy@taylorzane.com</a><br/>
+            li twitter: <a href='http://twitter.com/thetaylorzane'>@thetaylorzane</a><br/>
+            li github: <a href='https://github.com/taylorzane'>taylorzane</a><br/>
+            li &nbsp;
+            li keybase: <a href='https://keybase.io/taylorzane'>taylorzane</a><br/>
+            li gitlab: <a href='https://gitlab.com/u/taylorzane'>taylorzane</a><br/>
+            li stack overflow: <a href='http://stackoverflow.com/users/4459911/taylor-glaeser'>Taylor Glaeser</a><br/>
+            li reddit: <a href='https://reddit.com/user/taylorzane'>taylorzane</a><br/>
+            li hacker news: <a href='https://news.ycombinator.com/user?id=taylorzane'>taylorzane</a><br/>
+            li &nbsp;
+            li bitcoin: <a href="https://www.coinbase.com/taylorzane">14PmeiD4MCJU43x4wz2EnNWer2QvttLZ3Q</a><br/>
+            li pgp key: <a class="pgp-key-fingerprint" href='https://keybase.io/taylorzane/key.asc'>2047 A21E FA98 F8FB</a><br/>
+
+      .content-tab
+        input(type="radio" id="tab-projects" name="content")
+        label(for="tab-projects") Projects
+        .content
+          span These are some of the projects I'm working on right now.
+          ul.project-list
+            li
+              .title boxee-remote-ios
+              .status
+                a(href="https://github.com/taylorzane/boxee-remote-ios") Release &ndash; 1.0
+              .blurb Simple iOS app that allows you to control your Boxee Box.
+            //- FIXME: Uncomment these once they're released.
+            //- li
+              .title Four Thousand Weeks
+              .status Beta Phase
+              .blurb An app that gives you a macroscopic overview of your life, and lets you track things on a week-to-week basis.
+            //- li
+              .title
+                a(href="https://github.com/PearlySpace/pearly.space") pearly.space
+              .status Alpha Phase
+              .blurb A dashboard that lets you see what's important to you. Pulls data from the internet and your local network.
+            //- li
+              .title Dailies
+              .status Alpha Phase
+              .blurb An app that reminds you of tasks every day at set times. This is different from a todo list as the items persist every day.
+            //- li
+              .title Diner
+              .status Design Phase
+              .blurb A simple service that lets you track waiters and waitresses at restaurants where you'd like to ensure that you request, or avoid, a particular host.
+      .content-tab
+        input(type="radio" id="tab-resume" name="content")
+        label(for="tab-resume") Resume
+        .content
+          .job
+            .first-line
+              .title Software Architect
+              .period
+                .start 2014
+                .dash
+                .end &nbsp;
+            .second-line
+              a.company(href="https://adelyte.com") Adelyte Company
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
+                At Adelyte I blurb the blurbs. I also ensure that foo and bar are baz. My daily tasks consist of foo, bar, baz, and qux.
+          .job
+            .first-line
+              .title Founder &amp; Principal Architect
+              .period
+               .start 2014
+               .dash
+               .end &nbsp;
+            .second-line
+              a.company(href="https://caspiancode.com") Caspian Code
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
+          .job
+            .first-line
+              .title Development Consultant
+              .period
+                .start 2011
+                .dash
+                .end &nbsp;
+            .second-line
+              .company Self
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
+          .job
+            .first-line
+              .title SaaS DevOps Administrator
+              .period
+                .start 2013
+                .dash
+                .end 2014
+            .second-line
+              a.company(href="https://www.zenoss.com") Zenoss Inc.
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
+          .job
+            .first-line
+              .title iOS Customer Support
+              .period
+                .start 2012
+                .dash
+                .end 2013
+            .second-line
+              a.company(href="https://apple.com") Apple Inc.
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
+          .job
+            .first-line
+              .title Department Supervisor
+              .period
+                .start 2011
+                .dash
+                .end 2012
+            .second-line
+              a.company(href="http://frys.com") Fry's Electronics
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
+          .job
+            .first-line
+              .title Department Sales
+              .period
+                .start 2010
+                .dash
+                .end 2011
+            .second-line
+              a.company(href="http://frys.com") Fry's Electronics
+            .third-line
+            //- FIXME: Figure out what to put in here...
+              .blurb.
